@@ -2,9 +2,6 @@ import Koa from 'koa'
 import { createServer } from 'http'
 import { Server } from 'socket.io'
 const app = new Koa()
-app.use(async (ctx) => {
-  ctx.body = 'Hello World'
-})
 const httpServer = createServer(app.callback())
 const io = new Server(httpServer)
 
